@@ -1,20 +1,16 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import { useRouter } from 'next/router'
+// import Link from 'next/link'
 
 const Note = () => {
-    const router = useRouter();
-
-    const { id } = router.query;
+    const router = useRouter()
+    const { id } = router.query
 
     return (
-        <div className="">
-            <h1>
-                Note {id}
-            </h1>
-            <button onClick={e => router.push('/')}>Go Home</button>
-            <button onClick={e => router.push('/notes/[id]', `/notes/${parseInt(id) + 1}`)}>Next Note</button>
+        <div sx={{ variant: 'containers.page' }}>
+            <h1>Note: {id} </h1>
         </div>
-
     )
 }
 
