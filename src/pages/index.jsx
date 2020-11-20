@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import Link from 'next/link'
+import { jsx } from 'theme-ui';
 
 const Home = () => (
     <div sx={{ height: `calc(100vh - 60px)` }}>
@@ -9,5 +8,6 @@ const Home = () => (
         </div>
     </div>
 );
+
 
 export default Home;
